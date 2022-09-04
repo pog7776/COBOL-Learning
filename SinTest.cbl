@@ -23,12 +23,13 @@
            PERFORM ITERATIONS TIMES
 
       *>       Calculate spaces needed
-               COMPUTE DEC-CALCULATED = FUNCTION SIN (DECIMAL-VAL)
-               COMPUTE DEC-CALCULATED = DEC-CALCULATED + OFFSET
-               COMPUTE DEC-CALCULATED = DEC-CALCULATED * AMPLITUDE
-               COMPUTE DEC-CALCULATED ROUNDED = DEC-CALCULATED
+               DEC-CALCULATED = FUNCTION SIN (DECIMAL-VAL)
+               ADD OFFSET TO DEC-CALCULATED
+               MULTIPLY AMPLITUDE BY DEC-CALCULATED
       
       *>       Round to int so we can use it as a counter
+      *>       Literally just jamming the decimal number into an int
+      *>       I don't know if this is bad
                COMPUTE ROUND-INT = DEC-CALCULATED
 
       *>       Loop for all needed spaces
