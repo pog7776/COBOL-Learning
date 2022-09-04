@@ -23,7 +23,7 @@
            PERFORM ITERATIONS TIMES
 
       *>       Calculate spaces needed
-               DEC-CALCULATED = FUNCTION SIN (DECIMAL-VAL)
+               COMPUTE DEC-CALCULATED = FUNCTION SIN (DECIMAL-VAL)
                ADD OFFSET TO DEC-CALCULATED
                MULTIPLY AMPLITUDE BY DEC-CALCULATED
       
@@ -41,7 +41,7 @@
                  DISPLAY MESSAGE-STRING
       *>         DISPLAY DEC-CALCULATED
                
-               COMPUTE DECIMAL-VAL = DECIMAL-VAL + 0.1
+               ADD 0.1 TO DECIMAL-VAL
            END-PERFORM.
            
            goback.
