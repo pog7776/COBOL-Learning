@@ -1,9 +1,7 @@
 # COBOL-Learning
 Learning how to use COBOL
 
-View README.md Raw to see example output
-Github doesn't want to display it properly because of markdown
-
+```
                                              COBOL
                                         COBOL
                                    COBOL
@@ -67,3 +65,4 @@ COBOL
                                                            COBOL
                                                       COBOL
                                                  COBOL
+```
