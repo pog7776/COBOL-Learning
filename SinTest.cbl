@@ -14,7 +14,6 @@
        01  DEC-CALCULATED PIC S99V9(5).
        01  ROUND-INT PIC 9(4).
 
-       01  COUNT-VAL PIC 9(4) VALUE 0.
        01  SPACE-COUNTER PIC 9(4) VALUE 0.
 
        01  MESSAGE-STRING  pic x(5)  value "COBOL".
@@ -23,7 +22,7 @@
 
        procedure division.
 
-           PERFORM UNTIL COUNT-VAL = ITERATIONS
+           PERFORM ITERATIONS TIMES
 
       *>       Calculate spaces needed
                COMPUTE DEC-CALCULATED = FUNCTION SIN (DECIMAL-VAL)
@@ -46,7 +45,6 @@
       *>         DISPLAY DEC-CALCULATED
                
                COMPUTE DECIMAL-VAL = DECIMAL-VAL + 0.1
-               COMPUTE COUNT-VAL = COUNT-VAL + 1
            END-PERFORM.
            
            goback.
