@@ -14,8 +14,6 @@
        01  DEC-CALCULATED PIC S99V9(5).
        01  ROUND-INT PIC 9(4).
 
-       01  SPACE-COUNTER PIC 9(4) VALUE 0.
-
        01  MESSAGE-STRING  pic x(5)  value "COBOL".
 
        linkage section.
@@ -33,12 +31,10 @@
       *>       Round to int so we can use it as a counter
                COMPUTE ROUND-INT = DEC-CALCULATED
 
-      *>       Reset counter and loop for all needed spaces
-               COMPUTE SPACE-COUNTER = 0
-               PERFORM UNTIL SPACE-COUNTER = ROUND-INT
+      *>       Loop for all needed spaces
+               PERFORM ROUND-INT TIMES
       *>           NO ADVANCING to stop new line
                    DISPLAY " " NO ADVANCING
-                   ADD 1 TO SPACE-COUNTER
                END-PERFORM
 
                  DISPLAY MESSAGE-STRING
