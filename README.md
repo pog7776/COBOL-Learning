@@ -1,4 +1,6 @@
 # COBOL-Learning
+[![CodeFactor](https://www.codefactor.io/repository/github/pog7776/cobol-learning/badge)](https://www.codefactor.io/repository/github/pog7776/cobol-learning)
+
 Learning how to use COBOL
 
 ```
