@@ -38,8 +38,8 @@
                    DISPLAY " " NO ADVANCING
                END-PERFORM
 
-                 DISPLAY MESSAGE-STRING
-      *>         DISPLAY DEC-CALCULATED
+               DISPLAY MESSAGE-STRING
+      *>       DISPLAY DEC-CALCULATED
                
                ADD 0.1 TO DECIMAL-VAL
            END-PERFORM.
